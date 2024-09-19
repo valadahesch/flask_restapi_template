@@ -1,4 +1,0 @@
-<network>
-  <name>{network_id}</name>
-  <bridge name="{network_id}" />
-</network>

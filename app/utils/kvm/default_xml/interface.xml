@@ -1,5 +1,0 @@
-<interface type='network'>
-  <source network='{interface_name}'/>
-  <model type='e1000'/>
-</interface>
-

@@ -1,8 +1,0 @@
-2024-09-02 10:25:41,494 - INFO - _internal.py - 224 : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8000
- * Running on http://10.86.248.93:8000
-2024-09-02 10:25:41,497 - INFO - _internal.py - 224 : [33mPress CTRL+C to quit[0m
-2024-09-02 10:25:41,513 - INFO - _internal.py - 224 :  * Restarting with stat
-2024-09-02 10:25:50,083 - WARNING - _internal.py - 224 :  * Debugger is active!
-2024-09-02 10:25:50,094 - INFO - _internal.py - 224 :  * Debugger PIN: 144-031-776
