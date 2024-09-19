@@ -1,0 +1,9 @@
+<network>
+  <name>{network_id}</name>
+  <bridge name="{network_id}" stp="on" delay="0"/>
+  <ip address="198.51.100.1" netmask="255.255.255.0">
+    <dhcp>
+      <range start="198.51.100.2" end="198.51.100.254"/>
+    </dhcp>
+  </ip>
+</network>

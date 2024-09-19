@@ -1,0 +1,2140 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "techadmin",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "SE内部事务"
+    }
+  ],
+  "paths": {
+    "/api/presales/internal_work/project": {
+      "post": {
+        "summary": "创建项目",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "创建项目",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyaWQiOiJidnQ3bGJyZDNtOW05MHQiLCJ0aW1lc3RhbXAiOjE2ODk4MzY2ODEuMTY3NzM4fQ.g4d2v39tKSQFmugM-l3n3rl2K647Meml0ElWVW5R2KRvy5gl9E7ox4kg6Wtx0yurMZhzX0blaY7RanhIzIUdYw",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "subject": {
+                    "type": "string"
+                  },
+                  "owner_id": {
+                    "type": "string"
+                  },
+                  "account_id": {
+                    "type": "string"
+                  },
+                  "account_name": {
+                    "type": "string"
+                  },
+                  "contact_name": {
+                    "type": "string"
+                  },
+                  "contact_info": {
+                    "type": "string"
+                  },
+                  "support_type_1st": {
+                    "type": "string"
+                  },
+                  "support_type_2nd": {
+                    "type": "string"
+                  }
+                },
+                "x-apifox-orders": [
+                  "subject",
+                  "owner_id",
+                  "account_id",
+                  "account_name",
+                  "contact_name",
+                  "contact_info",
+                  "support_type_1st",
+                  "support_type_2nd"
+                ],
+                "required": [
+                  "subject",
+                  "owner_id",
+                  "support_type_1st",
+                  "support_type_2nd"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "project_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "project_number"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "id",
+                        "project_number"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "id": "wrq23lwttfvkl7c",
+                        "project_number": "86UB6AUGZG"
+                      },
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-96992127-run"
+      }
+    },
+    "/api/presales/internal_work/project/{project_id}": {
+      "get": {
+        "summary": "查看项目详情",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "查看项目详情",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "account_id": {
+                          "type": "string"
+                        },
+                        "account_name": {
+                          "type": "string"
+                        },
+                        "contact_info": {
+                          "type": "string"
+                        },
+                        "contact_name": {
+                          "type": "string"
+                        },
+                        "create_by_name": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        },
+                        "last_modified_by_id": {
+                          "type": "string"
+                        },
+                        "last_modified_date": {
+                          "type": "string"
+                        },
+                        "owner_id": {
+                          "type": "string"
+                        },
+                        "owner_name": {
+                          "type": "string"
+                        },
+                        "project_number": {
+                          "type": "string"
+                        },
+                        "subject": {
+                          "type": "string"
+                        },
+                        "support_type_1st": {
+                          "type": "string"
+                        },
+                        "support_type_2nd": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "account_id",
+                        "account_name",
+                        "contact_info",
+                        "contact_name",
+                        "create_by_name",
+                        "id",
+                        "last_modified_by_id",
+                        "last_modified_date",
+                        "owner_id",
+                        "owner_name",
+                        "project_number",
+                        "subject",
+                        "support_type_1st",
+                        "support_type_2nd"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "account_id",
+                        "account_name",
+                        "contact_info",
+                        "contact_name",
+                        "create_by_name",
+                        "id",
+                        "last_modified_by_id",
+                        "last_modified_date",
+                        "owner_id",
+                        "owner_name",
+                        "project_number",
+                        "subject",
+                        "support_type_1st",
+                        "support_type_2nd"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "account_id": "97",
+                        "account_name": "资红常走团",
+                        "contact_info": "aliquip ex officia adipisicing",
+                        "contact_name": "先及济认细角",
+                        "create_by_name": "",
+                        "id": "wrq23lwttfvkl7c",
+                        "last_modified_by_id": "bvt7lbrd3m9m90t",
+                        "last_modified_date": "2023-07-20 15:20:27",
+                        "owner_id": "bvt7lbrd3m9m90t",
+                        "owner_name": "",
+                        "project_number": "86UB6AUGZG",
+                        "subject": "quis",
+                        "support_type_1st": "dolore",
+                        "support_type_2nd": "in occaecat"
+                      },
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97079275-run"
+      }
+    },
+    "/api/presales/internal_work/task": {
+      "post": {
+        "summary": "创建主任务",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "创建主任务",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "project_id": {
+                    "type": "string"
+                  },
+                  "subject": {
+                    "type": "string"
+                  },
+                  "support_mode": {
+                    "type": "integer"
+                  },
+                  "account_id": {
+                    "type": "string"
+                  },
+                  "account_name": {
+                    "type": "string"
+                  },
+                  "contact_name": {
+                    "type": "string"
+                  },
+                  "contact_info": {
+                    "type": "string"
+                  },
+                  "start_time": {
+                    "type": "string"
+                  },
+                  "end_date": {
+                    "type": "string"
+                  }
+                },
+                "x-apifox-orders": [
+                  "project_id",
+                  "subject",
+                  "support_mode",
+                  "account_id",
+                  "account_name",
+                  "contact_name",
+                  "contact_info",
+                  "start_time",
+                  "end_date"
+                ],
+                "required": [
+                  "project_id",
+                  "subject",
+                  "support_mode"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "task_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "task_number"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "id",
+                        "task_number"
+                      ]
+                    },
+                    "code": {
+                      "type": "integer"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "code",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "data",
+                    "code",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "data": {
+                        "id": "i6pdseq8byog8s7",
+                        "task_number": "H99NCJ2S18"
+                      },
+                      "code": 0,
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97186527-run"
+      }
+    },
+    "/api/presales/internal_work/task/{task_id}/subtask": {
+      "post": {
+        "summary": "创建子主任务",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "创建子主任务",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "subject": {
+                    "type": "string"
+                  },
+                  "support_mode": {
+                    "type": "integer"
+                  },
+                  "account_id": {
+                    "type": "string"
+                  },
+                  "account_name": {
+                    "type": "string"
+                  },
+                  "contact_name": {
+                    "type": "string"
+                  },
+                  "contact_info": {
+                    "type": "string"
+                  },
+                  "start_time": {
+                    "type": "string"
+                  },
+                  "end_date": {
+                    "type": "string"
+                  }
+                },
+                "x-apifox-orders": [
+                  "subject",
+                  "support_mode",
+                  "account_id",
+                  "account_name",
+                  "contact_name",
+                  "contact_info",
+                  "start_time",
+                  "end_date"
+                ],
+                "required": [
+                  "subject",
+                  "support_mode"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "task_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "task_number"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "id",
+                        "task_number"
+                      ]
+                    },
+                    "code": {
+                      "type": "integer"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "data",
+                    "code",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "data",
+                    "code",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "data": {
+                        "id": "z40dutsx3nccmhs",
+                        "task_number": "LB1XFR9WJD"
+                      },
+                      "code": 0,
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97312425-run"
+      }
+    },
+    "/api/presales/internal_work/task/{task_id}/archive": {
+      "put": {
+        "summary": "任务归档",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "任务归档",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "task_result": {
+                    "type": "integer"
+                  },
+                  "remark": {
+                    "type": "string"
+                  }
+                },
+                "x-apifox-orders": [
+                  "task_result",
+                  "remark"
+                ],
+                "required": [
+                  "task_result",
+                  "remark"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": []
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {},
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97371623-run"
+      }
+    },
+    "/api/presales/internal_work/task/{task_id}": {
+      "get": {
+        "summary": "任务详情",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "任务详情",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "account_id": {
+                          "type": "string"
+                        },
+                        "account_name": {
+                          "type": "string"
+                        },
+                        "contact_info": {
+                          "type": "string"
+                        },
+                        "contact_name": {
+                          "type": "string"
+                        },
+                        "create_by_name": {
+                          "type": "string"
+                        },
+                        "created_by_id": {
+                          "type": "string"
+                        },
+                        "created_date": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        },
+                        "last_modified_by_id": {
+                          "type": "string"
+                        },
+                        "last_modified_date": {
+                          "type": "string"
+                        },
+                        "owner_id": {
+                          "type": "string"
+                        },
+                        "owner_name": {
+                          "type": "string"
+                        },
+                        "parent_id": {
+                          "type": "string"
+                        },
+                        "project_id": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "integer"
+                        },
+                        "subject": {
+                          "type": "string"
+                        },
+                        "support_mode": {
+                          "type": "integer"
+                        },
+                        "support_type_1st": {
+                          "type": "string"
+                        },
+                        "support_type_2nd": {
+                          "type": "string"
+                        },
+                        "task_end_date": {
+                          "type": "string"
+                        },
+                        "task_incomplete_reason": {
+                          "type": "string"
+                        },
+                        "task_number": {
+                          "type": "string"
+                        },
+                        "task_result": {
+                          "type": "integer"
+                        },
+                        "task_start_date": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "account_id",
+                        "account_name",
+                        "contact_info",
+                        "contact_name",
+                        "create_by_name",
+                        "created_by_id",
+                        "created_date",
+                        "id",
+                        "last_modified_by_id",
+                        "last_modified_date",
+                        "owner_id",
+                        "owner_name",
+                        "parent_id",
+                        "project_id",
+                        "status",
+                        "subject",
+                        "support_mode",
+                        "support_type_1st",
+                        "support_type_2nd",
+                        "task_end_date",
+                        "task_incomplete_reason",
+                        "task_number",
+                        "task_result",
+                        "task_start_date"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "account_id",
+                        "account_name",
+                        "contact_info",
+                        "contact_name",
+                        "create_by_name",
+                        "created_by_id",
+                        "created_date",
+                        "id",
+                        "last_modified_by_id",
+                        "last_modified_date",
+                        "owner_id",
+                        "owner_name",
+                        "parent_id",
+                        "project_id",
+                        "status",
+                        "subject",
+                        "support_mode",
+                        "support_type_1st",
+                        "support_type_2nd",
+                        "task_end_date",
+                        "task_incomplete_reason",
+                        "task_number",
+                        "task_result",
+                        "task_start_date"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "account_id": "96",
+                        "account_name": "称但西世江作",
+                        "contact_info": "laborum amet proident in officia",
+                        "contact_name": "劳验知题",
+                        "create_by_name": "",
+                        "created_by_id": "bvt7lbrd3m9m90t",
+                        "created_date": "2023-07-21 15:15:01",
+                        "id": "z40dutsx3nccmhs",
+                        "last_modified_by_id": "bvt7lbrd3m9m90t",
+                        "last_modified_date": "2023-07-21 15:15:01",
+                        "owner_id": "bvt7lbrd3m9m90t",
+                        "owner_name": "",
+                        "parent_id": "i6pdseq8byog8s7",
+                        "project_id": "wrq23lwttfvkl7c",
+                        "status": 1,
+                        "subject": "ea elit proident",
+                        "support_mode": 1,
+                        "support_type_1st": "dolore",
+                        "support_type_2nd": "in occaecat",
+                        "task_end_date": "1983-07-27 05:57:23",
+                        "task_incomplete_reason": "ullamco eu",
+                        "task_number": "LB1XFR9WJD",
+                        "task_result": 2,
+                        "task_start_date": "2020-11-18 05:57:23"
+                      },
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97389095-run"
+      }
+    },
+    "/api/presales/internal_work/task/{task_id}/record": {
+      "post": {
+        "summary": "创建日志",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "创建日志",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "support_start_date": {
+                    "type": "string"
+                  },
+                  "support_end_date": {
+                    "type": "string"
+                  },
+                  "support_duration": {
+                    "type": "integer"
+                  },
+                  "record_content": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apifox-orders": [],
+                    "x-apifox-ignore-properties": []
+                  },
+                  "status": {
+                    "type": "integer"
+                  }
+                },
+                "x-apifox-orders": [
+                  "support_start_date",
+                  "support_end_date",
+                  "support_duration",
+                  "record_content",
+                  "status"
+                ],
+                "required": [
+                  "status",
+                  "support_start_date",
+                  "support_end_date"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "id"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "id": "rku9hsjdvr5w7pf"
+                      },
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97596411-run"
+      }
+    },
+    "/api/presales/internal_work/task/{task_id}/record/list": {
+      "get": {
+        "summary": "日志列表",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "日志列表（或草稿列表）",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "list": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "created_by_id": {
+                                "type": "string"
+                              },
+                              "created_by_name": {
+                                "type": "string"
+                              },
+                              "created_date": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "last_modified_by_id": {
+                                "type": "string"
+                              },
+                              "last_modified_date": {
+                                "type": "string"
+                              },
+                              "published_date": {
+                                "type": "string"
+                              },
+                              "record_content": {
+                                "type": "object",
+                                "properties": {},
+                                "x-apifox-ignore-properties": [],
+                                "x-apifox-orders": []
+                              },
+                              "status": {
+                                "type": "integer"
+                              },
+                              "support_duration": {
+                                "type": "integer"
+                              },
+                              "support_end_date": {
+                                "type": "string"
+                              },
+                              "support_start_date": {
+                                "type": "string"
+                              },
+                              "task_id": {
+                                "type": "string"
+                              }
+                            },
+                            "x-apifox-ignore-properties": [],
+                            "x-apifox-orders": [
+                              "created_by_id",
+                              "created_by_name",
+                              "created_date",
+                              "id",
+                              "last_modified_by_id",
+                              "last_modified_date",
+                              "published_date",
+                              "record_content",
+                              "status",
+                              "support_duration",
+                              "support_end_date",
+                              "support_start_date",
+                              "task_id"
+                            ]
+                          }
+                        },
+                        "page": {
+                          "type": "integer"
+                        },
+                        "size": {
+                          "type": "integer"
+                        },
+                        "total": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "list",
+                        "page",
+                        "size",
+                        "total"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "list",
+                        "page",
+                        "size",
+                        "total"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "list": [
+                          {
+                            "created_by_id": "bvt7lbrd3m9m90t",
+                            "created_by_name": "",
+                            "created_date": "2023-07-24 09:58:30",
+                            "id": "rku9hsjdvr5w7pf",
+                            "last_modified_by_id": "bvt7lbrd3m9m90t",
+                            "last_modified_date": "2023-07-24 09:58:30",
+                            "published_date": "2023-07-24 09:58:30",
+                            "record_content": {},
+                            "status": 2,
+                            "support_duration": 30,
+                            "support_end_date": "2011-02-20 00:00:00",
+                            "support_start_date": "1985-06-10 00:00:00",
+                            "task_id": "z40dutsx3nccmhs"
+                          }
+                        ],
+                        "page": 1,
+                        "size": 1,
+                        "total": 1
+                      },
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97603258-run"
+      }
+    },
+    "/api/presales/internal_work/task/{task_id}/record/{record_id}": {
+      "put": {
+        "summary": "更新日志",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "更新日志，判断是否草稿、只能草稿改发布",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "record_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "support_start_date": {
+                    "type": "string"
+                  },
+                  "support_end_date": {
+                    "type": "string"
+                  },
+                  "support_duration": {
+                    "type": "integer"
+                  },
+                  "record_content": {
+                    "type": "object",
+                    "properties": {},
+                    "x-apifox-orders": [],
+                    "x-apifox-ignore-properties": []
+                  },
+                  "status": {
+                    "type": "integer"
+                  }
+                },
+                "x-apifox-orders": [
+                  "support_start_date",
+                  "support_end_date",
+                  "support_duration",
+                  "record_content",
+                  "status"
+                ],
+                "required": [
+                  "status"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": []
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {},
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97620482-run"
+      },
+      "delete": {
+        "summary": "删除草稿日志",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "删除草稿日志",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "task_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "record_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {},
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": []
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {},
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97625944-run"
+      }
+    },
+    "/api/presales/internal_work/project/list": {
+      "get": {
+        "summary": "查询项目列表",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "查询项目列表",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyaWQiOiJidnQ3bGJyZDNtOW05MHQiLCJ0aW1lc3RhbXAiOjE2ODk4MzY2ODEuMTY3NzM4fQ.g4d2v39tKSQFmugM-l3n3rl2K647Meml0ElWVW5R2KRvy5gl9E7ox4kg6Wtx0yurMZhzX0blaY7RanhIzIUdYw",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "list": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "deleted_by_id": {
+                            "type": "null"
+                          },
+                          "last_modified_date": {
+                            "type": "string"
+                          },
+                          "account_name": {
+                            "type": "string"
+                          },
+                          "support_type_1st": {
+                            "type": "string"
+                          },
+                          "support_type_2nd": {
+                            "type": "string"
+                          },
+                          "created_date": {
+                            "type": "string"
+                          },
+                          "contact_name": {
+                            "type": "string"
+                          },
+                          "deleted_date": {
+                            "type": "null"
+                          },
+                          "created_by_id": {
+                            "type": "string"
+                          },
+                          "last_modified_by_id": {
+                            "type": "string"
+                          },
+                          "project_number": {
+                            "type": "string"
+                          },
+                          "contact_info": {
+                            "type": "string"
+                          },
+                          "account_id": {
+                            "type": "string"
+                          },
+                          "project_type": {
+                            "type": "string"
+                          },
+                          "subject": {
+                            "type": "string"
+                          },
+                          "owner_id": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "string"
+                          },
+                          "created_by_name": {
+                            "type": "string"
+                          },
+                          "owner_name": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "deleted_by_id",
+                          "last_modified_date",
+                          "account_name",
+                          "support_type_1st",
+                          "support_type_2nd",
+                          "created_date",
+                          "contact_name",
+                          "deleted_date",
+                          "created_by_id",
+                          "last_modified_by_id",
+                          "project_number",
+                          "contact_info",
+                          "account_id",
+                          "project_type",
+                          "subject",
+                          "owner_id",
+                          "id",
+                          "created_by_name",
+                          "owner_name"
+                        ],
+                        "x-apifox-ignore-properties": [],
+                        "x-apifox-orders": [
+                          "deleted_by_id",
+                          "last_modified_date",
+                          "account_name",
+                          "support_type_1st",
+                          "support_type_2nd",
+                          "created_date",
+                          "contact_name",
+                          "deleted_date",
+                          "created_by_id",
+                          "last_modified_by_id",
+                          "project_number",
+                          "contact_info",
+                          "account_id",
+                          "project_type",
+                          "subject",
+                          "owner_id",
+                          "id",
+                          "created_by_name",
+                          "owner_name"
+                        ]
+                      }
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "page": {
+                      "type": "integer"
+                    },
+                    "size": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "list",
+                    "total",
+                    "page",
+                    "size"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "list",
+                    "total",
+                    "page",
+                    "size"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "list": [
+                        {
+                          "deleted_by_id": null,
+                          "last_modified_date": "2023-07-20 15:12:55",
+                          "account_name": "西事至很",
+                          "support_type_1st": "consectetur magna",
+                          "support_type_2nd": "exercitation",
+                          "created_date": "2023-07-20 15:12:55",
+                          "contact_name": "二者习在",
+                          "deleted_date": null,
+                          "created_by_id": "bvt7lbrd3m9m90t",
+                          "last_modified_by_id": "bvt7lbrd3m9m90t",
+                          "project_number": "XHAZCCTWK2",
+                          "contact_info": "elit",
+                          "account_id": "95",
+                          "project_type": "售前内部事务",
+                          "subject": "dolor sint sit",
+                          "owner_id": "bvt7lbrd3m9m90t",
+                          "id": "kz18ylofn52lku4",
+                          "created_by_name": "",
+                          "owner_name": ""
+                        }
+                      ],
+                      "total": 2,
+                      "page": 1,
+                      "size": 1000
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97664111-run"
+      }
+    },
+    "/api/presales/internal_work//task/list": {
+      "get": {
+        "summary": "查询任务列表",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "查询任务列表",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "query",
+            "description": "",
+            "required": true,
+            "example": "",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyaWQiOiJidnQ3bGJyZDNtOW05MHQiLCJ0aW1lc3RhbXAiOjE2ODk4MzY2ODEuMTY3NzM4fQ.g4d2v39tKSQFmugM-l3n3rl2K647Meml0ElWVW5R2KRvy5gl9E7ox4kg6Wtx0yurMZhzX0blaY7RanhIzIUdYw",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "list": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "account_id": {
+                                "type": "string"
+                              },
+                              "account_name": {
+                                "type": "string"
+                              },
+                              "contact_info": {
+                                "type": "string"
+                              },
+                              "contact_name": {
+                                "type": "string"
+                              },
+                              "created_by_id": {
+                                "type": "string"
+                              },
+                              "created_by_name": {
+                                "type": "string"
+                              },
+                              "created_date": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string"
+                              },
+                              "last_modified_by_id": {
+                                "type": "string"
+                              },
+                              "last_modified_date": {
+                                "type": "string"
+                              },
+                              "owner_id": {
+                                "type": "string"
+                              },
+                              "owner_name": {
+                                "type": "string"
+                              },
+                              "project_id": {
+                                "type": "string"
+                              },
+                              "status": {
+                                "type": "integer"
+                              },
+                              "subject": {
+                                "type": "string"
+                              },
+                              "support_mode": {
+                                "type": "integer"
+                              },
+                              "support_type_1st": {
+                                "type": "string"
+                              },
+                              "support_type_2nd": {
+                                "type": "string"
+                              },
+                              "task_end_date": {
+                                "type": "string"
+                              },
+                              "task_incomplete_reason": {
+                                "type": "string"
+                              },
+                              "task_number": {
+                                "type": "string"
+                              },
+                              "task_result": {
+                                "type": "integer"
+                              },
+                              "task_start_date": {
+                                "type": "string"
+                              },
+                              "parent_id": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "account_id",
+                              "account_name",
+                              "contact_info",
+                              "contact_name",
+                              "created_by_id",
+                              "created_by_name",
+                              "created_date",
+                              "id",
+                              "last_modified_by_id",
+                              "last_modified_date",
+                              "owner_id",
+                              "owner_name",
+                              "project_id",
+                              "status",
+                              "subject",
+                              "support_mode",
+                              "support_type_1st",
+                              "support_type_2nd",
+                              "task_end_date",
+                              "task_incomplete_reason",
+                              "task_number",
+                              "task_result",
+                              "task_start_date"
+                            ],
+                            "x-apifox-ignore-properties": [],
+                            "x-apifox-orders": [
+                              "account_id",
+                              "account_name",
+                              "contact_info",
+                              "contact_name",
+                              "created_by_id",
+                              "created_by_name",
+                              "created_date",
+                              "id",
+                              "last_modified_by_id",
+                              "last_modified_date",
+                              "owner_id",
+                              "owner_name",
+                              "project_id",
+                              "status",
+                              "subject",
+                              "support_mode",
+                              "support_type_1st",
+                              "support_type_2nd",
+                              "task_end_date",
+                              "task_incomplete_reason",
+                              "task_number",
+                              "task_result",
+                              "task_start_date",
+                              "parent_id"
+                            ]
+                          }
+                        },
+                        "page": {
+                          "type": "integer"
+                        },
+                        "size": {
+                          "type": "integer"
+                        },
+                        "total": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "list",
+                        "page",
+                        "size",
+                        "total"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "list",
+                        "page",
+                        "size",
+                        "total"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "list": [
+                          {
+                            "account_id": "39",
+                            "account_name": "求来用气公增",
+                            "contact_info": "dolore fugiat nulla in",
+                            "contact_name": "性带直新斯图写",
+                            "created_by_id": "bvt7lbrd3m9m90t",
+                            "created_by_name": "",
+                            "created_date": "2023-07-21 14:54:12",
+                            "id": "i6pdseq8byog8s7",
+                            "last_modified_by_id": "bvt7lbrd3m9m90t",
+                            "last_modified_date": "2023-07-21 14:54:12",
+                            "owner_id": "bvt7lbrd3m9m90t",
+                            "owner_name": "",
+                            "project_id": "wrq23lwttfvkl7c",
+                            "status": 1,
+                            "subject": "ut",
+                            "support_mode": 1,
+                            "support_type_1st": "dolore",
+                            "support_type_2nd": "in occaecat",
+                            "task_end_date": "1997-09-29 11:27:23",
+                            "task_incomplete_reason": "ullamco eu",
+                            "task_number": "H99NCJ2S18",
+                            "task_result": 1,
+                            "task_start_date": "2022-09-24 11:27:23"
+                          }
+                        ],
+                        "page": 1,
+                        "size": 1000,
+                        "total": 0
+                      },
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97690780-run"
+      }
+    },
+    "/api/presales/internal_work/project/{project_id}/archive": {
+      "put": {
+        "summary": "项目归档",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "项目归档",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "project_id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyaWQiOiJidnQ3bGJyZDNtOW05MHQiLCJ0aW1lc3RhbXAiOjE2ODk4MzY2ODEuMTY3NzM4fQ.g4d2v39tKSQFmugM-l3n3rl2K647Meml0ElWVW5R2KRvy5gl9E7ox4kg6Wtx0yurMZhzX0blaY7RanhIzIUdYw",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "type": "integer"
+                  }
+                },
+                "x-apifox-orders": [
+                  "status"
+                ],
+                "required": [
+                  "status"
+                ],
+                "x-apifox-ignore-properties": []
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "project_number": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "project_number"
+                      ],
+                      "x-apifox-ignore-properties": [],
+                      "x-apifox-orders": [
+                        "id",
+                        "project_number"
+                      ]
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "data",
+                    "message"
+                  ],
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": [
+                    "code",
+                    "data",
+                    "message"
+                  ]
+                },
+                "examples": {
+                  "1": {
+                    "summary": "成功示例",
+                    "value": {
+                      "code": 0,
+                      "data": {
+                        "id": "wrq23lwttfvkl7c",
+                        "project_number": "86UB6AUGZG"
+                      },
+                      "message": "successful"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97852592-run"
+      }
+    },
+    "/api/presales/project/owner": {
+      "get": {
+        "summary": "获取责任人",
+        "x-apifox-folder": "SE内部事务",
+        "x-apifox-status": "developing",
+        "deprecated": false,
+        "description": "获取责任人，当前用户及下属列表",
+        "tags": [
+          "SE内部事务"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "",
+            "required": false,
+            "example": "Bearer ",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-ignore-properties": [],
+                  "x-apifox-orders": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/2738369/apis/api-97981599-run"
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  },
+  "servers": []
+}

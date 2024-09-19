@@ -1,0 +1,23 @@
+2024-06-26 10:14:41,093 - INFO - _internal.py - 224 : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.86.248.93:8000
+2024-06-26 10:14:41,094 - INFO - _internal.py - 224 : [33mPress CTRL+C to quit[0m
+2024-06-26 10:14:41,095 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-26 10:14:51,138 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-26 10:14:51,176 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-26 10:15:17,847 - INFO - _internal.py - 224 : 10.88.16.192 - - [26/Jun/2024 10:15:17] "GET /api/presales/project_manage/task/list/mine?page=1&size=10&project_number=5U0Y37BSAX HTTP/1.1" 200 -
+2024-06-26 10:15:47,699 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/controllers/response/se_project_response.py', reloading
+2024-06-26 10:15:48,871 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-26 10:15:56,142 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-26 10:15:56,153 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-26 10:18:18,216 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/business_platform/projectmanage_api.py', reloading
+2024-06-26 10:18:19,731 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-26 10:18:28,379 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-26 10:18:28,408 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-26 10:21:25,029 - INFO - _internal.py - 224 : 10.88.16.192 - - [26/Jun/2024 10:21:25] "GET /api/presales/project_manage/task/list/mine?page=1&size=10 HTTP/1.1" 200 -
+2024-06-27 10:05:52,906 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/ps_inspection/office_util.py', reloading
+2024-06-27 10:05:54,304 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-27 10:06:01,541 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-27 10:06:01,552 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-27 13:20:13,805 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/tests/test_models/test_techadmin.py', reloading

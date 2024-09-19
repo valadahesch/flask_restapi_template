@@ -1,0 +1,83 @@
+2024-08-08 11:36:12,497 - INFO - _internal.py - 224 : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.86.248.93:8000
+2024-08-08 11:36:12,498 - INFO - _internal.py - 224 : [33mPress CTRL+C to quit[0m
+2024-08-08 11:36:12,500 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:36:20,583 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:36:20,597 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:37:35,683 - INFO - _internal.py - 224 : 10.88.16.227 - - [08/Aug/2024 11:37:35] "GET /api/aggregated_search/overview?q=2812344185000846 HTTP/1.1" 200 -
+2024-08-08 11:37:52,759 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:37:54,085 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:38:02,295 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:38:02,336 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:38:04,229 - INFO - _internal.py - 224 : 10.88.16.227 - - [08/Aug/2024 11:38:04] "GET /api/aggregated_search/overview?q=2812344185000846 HTTP/1.1" 200 -
+2024-08-08 11:40:01,187 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:40:02,539 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:40:11,605 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:40:11,619 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:40:12,747 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:40:14,847 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:40:24,583 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:40:24,623 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:40:26,185 - INFO - _internal.py - 224 : 10.88.16.227 - - [08/Aug/2024 11:40:26] "GET /api/aggregated_search/overview?q=2812344185000846 HTTP/1.1" 200 -
+2024-08-08 11:41:30,091 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:41:31,238 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:41:39,893 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:41:39,908 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:41:48,714 - INFO - _internal.py - 224 : 10.88.16.227 - - [08/Aug/2024 11:41:48] "GET /api/aggregated_search/overview?q=2812344185000846 HTTP/1.1" 200 -
+2024-08-08 11:42:47,381 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:42:48,801 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:42:56,461 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:42:56,484 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:43:13,001 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:43:14,277 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:43:23,491 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:43:23,565 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:43:27,627 - INFO - _internal.py - 224 : 10.88.16.227 - - [08/Aug/2024 11:43:27] "GET /api/aggregated_search/overview?q=2812344185000846 HTTP/1.1" 200 -
+2024-08-08 11:43:43,491 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:43:44,767 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:43:53,083 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:43:53,099 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:44:34,283 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:44:35,313 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:44:43,064 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:44:43,078 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:44:45,340 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:44:47,372 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:44:57,572 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:44:57,656 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:44:59,968 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:45:01,063 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:45:08,675 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:45:08,687 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:45:15,149 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:45:16,169 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:45:25,422 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:45:25,437 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:45:45,261 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:45:46,542 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:45:56,442 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:45:56,536 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:45:57,884 - INFO - _internal.py - 224 : 10.88.16.227 - - [08/Aug/2024 11:45:57] "GET /api/aggregated_search/overview?q=2812344185000846 HTTP/1.1" 200 -
+2024-08-08 11:46:33,650 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:46:35,099 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:46:44,582 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:46:44,597 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:46:48,998 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/utils/st_util.py', reloading
+2024-08-08 11:46:50,674 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:47:42,582 - INFO - _internal.py - 224 : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.86.248.93:8000
+2024-08-08 11:47:42,582 - INFO - _internal.py - 224 : [33mPress CTRL+C to quit[0m
+2024-08-08 11:47:42,584 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:47:50,976 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:47:51,004 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 11:48:02,354 - INFO - _internal.py - 224 : 10.88.16.227 - - [08/Aug/2024 11:48:02] "GET /api/aggregated_search/overview?q=2812344185000846 HTTP/1.1" 200 -
+2024-08-08 11:48:52,766 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/business_platform/projectmanage_api.py', reloading
+2024-08-08 11:48:54,153 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-08-08 11:49:04,236 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-08-08 11:49:04,257 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-08-08 15:34:52,141 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/sys_internal/crm_api.py', reloading
+2024-08-08 15:34:53,940 - INFO - _internal.py - 224 :  * Restarting with stat

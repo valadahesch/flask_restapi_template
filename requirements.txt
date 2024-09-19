@@ -1,0 +1,82 @@
+# -*- coding: utf-8 -*-
+paramiko
+qiniu
+pyDes
+Pillow
+psutil
+redis
+flasgger
+apscheduler
+xlsxwriter
+bcrypt
+requests
+marshmallow
+pymysql
+netmiko
+alibabacloud_ccc20200701
+docxtpl
+matplotlib
+
+
+zeep==4.2.1
+pyguacamole==0.11
+chardet==5.2.0
+pandas==1.5.3
+ping3 == 4.0.4
+tornado==6.4
+gevent==23.9.1
+sqlalchemy==1.4.47
+werkzeug==2.2.3
+Jinja2==3.0.3
+flask_caching==2.0.2
+casbin==1.18.2
+casbin_sqlalchemy_adapter==0.5.1
+nanoid==2.0.0
+boto3==1.26.133
+elasticsearch==6.3.1
+apollo-client==2.1.2
+pyodbc==4.0.39
+openpyxl==3.0.5
+beautifulsoup4==4.12.2
+lxml==4.9.4
+playwright==1.39.0
+# libvirt-python需要在服务器安装libvirt依赖
+# [CentOS] yum install libvirt libvirt-python libvirt-devel -y
+# [Ubuntu、Debian] 参考Dockerfile
+libvirt-python==9.7.0
+pyjwt==2.8.0
+confluent-kafka==2.2.0
+redlock-py==1.0.8
+numpy==1.23
+grpcio==1.62.1
+# Flask Extensions
+Flask==2.2.5
+Flask-Assets==2.0
+Flask-Cache==0.13.1
+Flask-DebugToolbar==0.11.0
+Flask-Login==0.2.11
+Flask-SQLAlchemy==2.5.0
+Flask-Script==1.0.0
+Flask-RESTful==0.3.9
+Flask-Session==0.4.0
+Flask-CORS==3.0.10
+# Testing
+pytest==3.7.1
+coverage==4.4
+flake8==2.4.0
+protobuf==3.20.3
+aliyun-log-python-sdk==0.8.6
+
+#OpenTelemetry
+opentelemetry-distro
+opentelemetry-exporter-otlp
+opentelemetry-instrumentation-flask
+opentelemetry-instrumentation-requests
+opentelemetry-instrumentation-sqlalchemy
+opentelemetry-instrumentation-elasticsearch
+opentelemetry-instrumentation-redis
+
+--find-links https://pypi.tac.hillstonenet.com/root/devops
+--trusted-host=pypi.tac.hillstonenet.com
+conf2hillstone==0.1.10
+configure-conversion-sdk==0.1.9

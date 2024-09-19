@@ -1,0 +1,12 @@
+<network>
+  <name>{network_id}</name>
+  <forward dev='ens3' mode='nat'>
+    <interface dev='ens3' />
+  </forward>
+  <bridge name="{network_id}" stp="on" delay="0"/>
+  <ip address="192.0.3.1" netmask="255.255.255.0">
+    <dhcp>
+      <range start="192.0.3.2" end="192.0.3.254"/>
+    </dhcp>
+  </ip>
+</network>

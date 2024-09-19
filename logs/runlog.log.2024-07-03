@@ -1,0 +1,11 @@
+2024-07-03 14:47:47,610 - INFO - _internal.py - 224 : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.86.248.93:8000
+2024-07-03 14:47:47,613 - INFO - _internal.py - 224 : [33mPress CTRL+C to quit[0m
+2024-07-03 14:47:47,630 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-07-03 14:47:55,676 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-07-03 14:47:55,707 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-07-03 14:49:46,573 - INFO - _internal.py - 224 : 10.88.16.192 - - [03/Jul/2024 14:49:46] "GET /api/dashboard/todo_statistics/se HTTP/1.1" 200 -
+2024-07-03 14:50:47,036 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/controllers/dao/se_work_dao.py', reloading
+2024-07-03 14:50:48,351 - INFO - _internal.py - 224 :  * Restarting with stat

@@ -1,0 +1,61 @@
+2024-06-06 15:53:28,404 - INFO - _internal.py - 224 : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.86.248.93:8000
+2024-06-06 15:53:28,408 - INFO - _internal.py - 224 : [33mPress CTRL+C to quit[0m
+2024-06-06 15:53:28,409 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 15:53:33,944 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 15:53:33,954 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 15:54:46,827 - WARNING - main_api.py - 117 : app_errorhandler AppException: {"request": "{'method': 'GET', 'scheme': 'http', 'server': ('0.0.0.0', 8000), 'root_path': '', 'path': '/api/message_gateway/template/list', 'query_string': b'page=1&size=10&enable[]=false&like=', 'headers': EnvironHeaders([('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJ1a3J3a2l5aDludHY1YWoiLCJ0aW1lc3RhbXAiOjE3MTc1NTI1NDAuNzQyMTk5fQ.KDinMYW04D7cc1LkoZqeQdBxlDqpc5Bnbj-Nt53twpI'), ('X-Permission', 'dic_ticket_manage:all'), ('Content-Type', 'application/json'), ('User-Agent', 'PostmanRuntime/7.29.2'), ('Accept', '*/*'), ('Cache-Control', 'no-cache'), ('Postman-Token', '3213ed40-521c-447b-beba-e006dba804d6'), ('Host', '10.86.248.93:8000'), ('Accept-Encoding', 'gzip, deflate, br'), ('Connection', 'keep-alive'), ('Content-Length', '58')]), 'remote_addr': '10.88.16.192', 'environ': {'wsgi.version': (1, 0), 'wsgi.url_scheme': 'http', 'wsgi.input': <_io.BufferedReader name=8>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='utf-8'>, 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.run_once': False, 'werkzeug.socket': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('10.86.248.93', 8000), raddr=('10.88.16.192', 2230)>, 'SERVER_SOFTWARE': 'Werkzeug/2.2.3', 'REQUEST_METHOD': 'GET', 'SCRIPT_NAME': '', 'PATH_INFO': '/api/message_gateway/template/list', 'QUERY_STRING': 'page=1&size=10&enable[]=false&like=', 'REQUEST_URI': '/api/message_gateway/template/list?page=1&size=10&enable[]=false&like=', 'RAW_URI': '/api/message_gateway/template/list?page=1&size=10&enable[]=false&like=', 'REMOTE_ADDR': '10.88.16.192', 'REMOTE_PORT': 2230, 'SERVER_NAME': '0.0.0.0', 'SERVER_PORT': '8000', 'SERVER_PROTOCOL': 'HTTP/1.1', 'HTTP_AUTHORIZATION': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiJ1a3J3a2l5aDludHY1YWoiLCJ0aW1lc3RhbXAiOjE3MTc1NTI1NDAuNzQyMTk5fQ.KDinMYW04D7cc1LkoZqeQdBxlDqpc5Bnbj-Nt53twpI', 'HTTP_X_PERMISSION': 'dic_ticket_manage:all', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.29.2', 'HTTP_ACCEPT': '*/*', 'HTTP_CACHE_CONTROL': 'no-cache', 'HTTP_POSTMAN_TOKEN': '3213ed40-521c-447b-beba-e006dba804d6', 'HTTP_HOST': '10.86.248.93:8000', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'CONTENT_LENGTH': '58', 'werkzeug.request': <Request 'http://10.86.248.93:8000/api/message_gateway/template/list?page=1&size=10&enable%5B%5D=false&like=' [GET]>, 'werkzeug.debug.preserve_context': <built-in method append of list object at 0x7f6751667b00>}, 'shallow': False, 'json_module': <flask.json.provider.DefaultJSONProvider object at 0x7f67796949d0>, 'cookies': ImmutableMultiDict([]), 'url_rule': <Rule '/api/message_gateway/template/list' (OPTIONS, HEAD, GET) -> message_gateway.listmessagegatewaytemplate>, 'view_args': {}, 'host': '10.86.248.93:8000', 'url': 'http://10.86.248.93:8000/api/message_gateway/template/list?page=1&size=10&enable%5B%5D=false&like='}", "message": "认证失败，请重新登录！"}
+2024-06-06 15:54:46,832 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 15:54:46] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=false&like= HTTP/1.1" 200 -
+2024-06-06 15:55:01,870 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 15:55:01] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=false&like= HTTP/1.1" 200 -
+2024-06-06 15:55:41,955 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/communication_platform/message_gateway_api.py', reloading
+2024-06-06 15:55:43,203 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 15:55:48,929 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 15:55:48,938 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 15:55:50,549 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 15:55:50] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=false&like= HTTP/1.1" 200 -
+2024-06-06 15:56:49,456 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 15:56:49] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=true&like= HTTP/1.1" 200 -
+2024-06-06 15:57:01,918 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 15:57:01] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=true&like=&enable[]=false HTTP/1.1" 200 -
+2024-06-06 15:58:37,730 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/communication_platform/message_gateway_api.py', reloading
+2024-06-06 15:58:38,668 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 15:58:44,292 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 15:58:44,300 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 15:58:47,159 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 15:58:47] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=true&like=&enable[]=false HTTP/1.1" 200 -
+2024-06-06 15:59:04,110 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 15:59:04] "GET /api/message_gateway/template/list?page=1&size=10&like=&enable[]=false HTTP/1.1" 200 -
+2024-06-06 15:59:42,256 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/communication_platform/message_gateway_api.py', reloading
+2024-06-06 15:59:43,136 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 15:59:50,473 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 15:59:50,482 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 15:59:55,956 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/communication_platform/message_gateway_api.py', reloading
+2024-06-06 15:59:57,100 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 16:00:03,280 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 16:00:03,289 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 16:00:10,809 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/test.py', reloading
+2024-06-06 16:00:11,858 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 16:00:17,451 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 16:00:17,459 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 16:00:46,465 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 16:00:46] "GET /api/message_gateway/template/list?page=1&size=10&like=&enable[]=false HTTP/1.1" 200 -
+2024-06-06 16:03:00,690 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/communication_platform/message_gateway_api.py', reloading
+2024-06-06 16:03:08,605 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 16:03:15,329 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 16:03:15,338 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 16:03:16,938 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 16:03:16] "GET /api/message_gateway/template/list?page=1&size=10&like=&enable[]=false HTTP/1.1" 200 -
+2024-06-06 16:04:21,581 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/communication_platform/message_gateway_api.py', reloading
+2024-06-06 16:04:34,569 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 16:07:19,619 - INFO - _internal.py - 224 : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.86.248.93:8000
+2024-06-06 16:07:19,619 - INFO - _internal.py - 224 : [33mPress CTRL+C to quit[0m
+2024-06-06 16:07:19,620 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 16:07:25,415 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 16:07:25,424 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-06 16:07:59,427 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 16:07:59] "GET /api/message_gateway/template/list?page=1&size=10&like=&enable[]=false HTTP/1.1" 200 -
+2024-06-06 16:08:09,773 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 16:08:09] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=true&like=&enable[]=false HTTP/1.1" 200 -
+2024-06-06 16:08:16,275 - INFO - _internal.py - 224 : 10.88.16.192 - - [06/Jun/2024 16:08:16] "GET /api/message_gateway/template/list?page=1&size=10&enable[]=true&like= HTTP/1.1" 200 -
+2024-06-06 16:08:24,274 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/views/communication_platform/message_gateway_api.py', reloading
+2024-06-06 16:08:25,316 - INFO - _internal.py - 224 :  * Restarting with stat
+2024-06-06 16:08:30,967 - WARNING - _internal.py - 224 :  * Debugger is active!
+2024-06-06 16:08:30,976 - INFO - _internal.py - 224 :  * Debugger PIN: 115-440-649
+2024-06-07 09:35:06,476 - INFO - _internal.py - 224 :  * Detected change in '/python_project/techadmin-sever/app/test.py', reloading
+2024-06-07 09:35:07,720 - INFO - _internal.py - 224 :  * Restarting with stat

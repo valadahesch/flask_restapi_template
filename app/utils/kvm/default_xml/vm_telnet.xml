@@ -1,0 +1,37 @@
+<domain type='kvm'>
+  <name>{name}</name>
+  <memory unit='KiB'>{ram}</memory>
+  <vcpu placement='static'>{cpu}</vcpu>
+  <os>
+    <type arch='x86_64' machine='pc-i440fx-rhel7.0.0'>hvm</type>
+    <boot dev='hd'/>
+  </os>
+  <features>
+    <acpi/>
+    <apic/>
+  </features>
+  <devices>
+    <input type='tablet' bus='usb'/>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2'/>
+      <source file='/instance/images/{node_id}/{image_id}'/>
+      <target dev='hda' bus='ide'/>
+      <address type='drive' controller='0' bus='0' target='0' unit='0'/>
+    </disk>
+    <console type='tcp'>
+        <source mode='bind' host='0.0.0.0' service='{telnet_port}' tls='no' tlsFromConfig='1'/>
+        <protocol type='telnet'/>
+        <target type='serial' port='0'/>
+        <alias name='serial0'/>
+    </console>
+    <graphics type='vnc' listen='0.0.0.0' autoport='no' port='{vnc_port}'/>
+    <video>
+      <model type='qxl' ram='65536' vram='65536' vgamem='16384' heads='1' primary='yes'/>
+    </video>
+    {interfaces_xml}
+  </devices>
+  <boot order='cdn'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>destroy</on_crash>
+</domain>

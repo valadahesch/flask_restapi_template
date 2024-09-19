@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+service CasbinUtil {
+   rpc enforce(UserPermission) returns (VerifyResult) {}
+   rpc getRolesUser(UserId) returns (StringList) {}
+   rpc addRoleUser(UserRole) returns (EmptyResponse) {}
+   rpc addRule(Rule) returns (EmptyResponse) {}
+   rpc deleteRoleUser(UserRole) returns (EmptyResponse) {}
+   rpc deleteRole(RoleId) returns (EmptyResponse) {}
+   rpc deleteRoleMenu(Rule) returns (EmptyResponse) {}
+   rpc getPermissionByUserId(UserId) returns (PermissionResponse) {}
+}
+
+message UserPermission {
+  string user_id = 1;
+  string permission = 2;
+}
+
+message UserRole {
+  string user_id = 1;
+  string role_id = 2;
+}
+
+message Rule {
+  string rule = 1;
+}
+
+message RoleId {
+  string role_id = 1;
+}
+
+message UserId {
+  string user_id = 1;
+}
+
+message EmptyResponse {
+}
+
+message VerifyResult {
+  bool verify_result = 1;
+}
+
+message PermissionResponse {
+  repeated Row row = 1;
+
+  message Row {
+    repeated string items = 1;
+  }
+}
+
+message StringList {
+  repeated string items = 1;
+}

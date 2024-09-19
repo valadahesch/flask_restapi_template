@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="google" content="notranslate" />
+		<link
+			href="/webagent/static/img/console_favicon.svg"
+			rel="icon"
+			type="image/x-icon"
+		/>
+		<title>Console</title>
+		<style>
+			:root {
+				--blue: #007bff;
+				--indigo: #6610f2;
+				--purple: #6f42c1;
+				--pink: #e83e8c;
+				--red: #dc3545;
+				--orange: #fd7e14;
+				--yellow: #ffc107;
+				--green: #28a745;
+				--teal: #20c997;
+				--cyan: #17a2b8;
+				--white: #fff;
+				--gray: #6c757d;
+				--gray-dark: #343a40;
+				--primary: #007bff;
+				--secondary: #6c757d;
+				--success: #28a745;
+				--info: #17a2b8;
+				--warning: #ffc107;
+				--danger: #dc3545;
+				--light: #f8f9fa;
+				--dark: #343a40;
+				--breakpoint-xs: 0;
+				--breakpoint-sm: 576px;
+				--breakpoint-md: 768px;
+				--breakpoint-lg: 992px;
+				--breakpoint-xl: 1200px;
+				--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+					Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+					sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+					"Noto Color Emoji";
+				--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+					"Liberation Mono", "Courier New", monospace;
+			}
+			body {
+				margin: 0;
+				background-color: dimgrey;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			html {
+				height: 100%;
+			}
+			#mask {
+				position: absolute;
+				top: 40px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #1b1b1b;
+				opacity: 0.8;
+				z-index: 99;
+				backdrop-filter: blur(7px);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+			}
+
+			#top_bar {
+				background-color: #6e84a3;
+				color: white;
+				font: bold 12px Helvetica;
+				padding: 6px 5px 4px 5px;
+				border-bottom: 1px outset;
+				height: 40px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				box-sizing: border-box;
+			}
+			.info {
+				padding: 0 8px;
+				display: flex;
+			}
+			.mr16 {
+				margin-right: 16px;
+			}
+
+			#status {
+				text-align: center;
+			}
+
+			#c_user {
+				display: flex;
+				align-items: center;
+			}
+
+			#screen {
+				flex: 1;
+				/* fill remaining space */
+				overflow: hidden;
+			}
+			#sendCtrlAltDelButton {
+				cursor: pointer;
+			}
+		</style>
+		<script>
+			window.cloud_lab_data = (() => {
+				return {
+					ws_id: "{{ws_id}}",
+					ws_url: "{{ws_url}}",
+					node_id: "{{node_id}}",
+					node_name: "{{node_name}}",
+					instance_id: "{{instance_id}}",
+					instance_name: "{{instance_name}}",
+					login_name: "{{login_name}}",
+					username: "{{username}}",
+					password: "{{password}}",
+				};
+			})();
+		</script>
+
+		<script src="/webagent/static/js/expire.js"></script>
+		<script type="module" crossorigin="anonymous">
+			// RFB holds the API to connect and communicate with a VNC server
+			import RFB from "/webagent/static/core/rfb.js";
+
+			window.onload =  () => {
+				ready();
+			};
+
+			function ready() {
+				let rfb;
+				const statusEl = document.getElementById("status");
+				const topBar = document.getElementById("top_bar")
+				const sendCtrlAltDelButtonEl = document.getElementById(
+					"sendCtrlAltDelButton"
+				);
+				const screenEl = document.getElementById("screen");
+				const maskEl = document.getElementById("mask");
+				const ConnectMap = {
+					DISCONNECTED: 0,
+					CONNECTING: 1,
+					CONNECTED: 2,
+				};
+				const ConnectMapColor = {
+					DISCONNECTED: "var(--danger)",
+					CONNECTING: "var(--primary)",
+					CONNECTED: "var(--success)",
+				};
+				const ConnectMapData = {
+					DISCONNECTED: "已断开",
+					CONNECTING: "连接中",
+					CONNECTED: "已连接",
+				};
+
+				function getTitle(status) {
+					return `[${status}][${window.cloud_lab_data?.login_name}][${window.cloud_lab_data?.node_name}][${window.cloud_lab_data?.instance_name}]`;
+				}
+
+				function updateStatus(status) {
+					const statusMap = Object.entries(ConnectMap).find(
+						(c) => c[1] === status
+					)[0];
+					const statusText = ConnectMapData[statusMap];
+					const statusColor = ConnectMapColor[statusMap];
+					statusEl.innerHTML = `状态：<span style="color:${statusColor}">${statusText}</span>`;
+					document.title = getTitle(statusText);
+				}
+
+				// When this function is called we have
+				// successfully connected to a server
+				function connectedToServer(e) {
+					updateStatus(ConnectMap.CONNECTED);
+				}
+
+				// This function is called when we are disconnected
+				function disconnectedFromServer(e) {
+					updateStatus(ConnectMap.DISCONNECTED);
+				}
+
+				// Since most operating systems will catch Ctrl+Alt+Del
+				// before they get a chance to be intercepted by the browser,
+				// we provide a way to emulate this key sequence.
+				function sendCtrlAltDel() {
+					console.log("ctrl alt del");
+					rfb.sendCtrlAltDel();
+					return false;
+				}
+
+				sendCtrlAltDelButtonEl.onclick = sendCtrlAltDel;
+				updateStatus(ConnectMap.CONNECTING);
+
+				// Build the websocket URL used to connect
+				const url = `${window.cloud_lab_data.ws_url}/cloud_lab/vnc?ws_id=${window.cloud_lab_data.ws_id}&node_id=${window.cloud_lab_data.node_id}`;
+				// Creating a new RFB object will start a new connection
+				rfb = new RFB(screenEl, url);
+				// Set parameters that can be changed on an active connection
+				rfb.viewOnly = false;
+				rfb.scaleViewport = true;
+
+				// Add listeners to important events from the RFB module
+				rfb.addEventListener("connect", connectedToServer);
+				rfb.addEventListener("disconnect", disconnectedFromServer);
+				// rfb.addEventListener("credentialsrequired", credentialsAreRequired);
+				// rfb.addEventListener("desktopname", updateDesktopName);
+
+				maskEl.addEventListener("click", (e) => {
+					maskEl.style.display = "none";
+					rfb.focus();
+				});
+
+				topBar.addEventListener("click", () => {
+					maskEl.style.display = "flex";
+				});
+
+
+				new Expire();
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="top_bar">
+			<div class="info">
+				<span class="mr16" id="status"></span>
+				<span class="mr16">管理名称：{{login_name}} </span>
+				<span class="mr16">节点名称：{{node_name}} </span>
+				<span class="mr16">实例名称：{{instance_name}} </span>
+				<span class="mr16">用户名：{{username}} </span>
+				<span class="mr16">密码：{{password}} </span>
+				<span class="mr16" id="c_expire"
+					>实例剩余时间：<span id="expire_time">00:00:00</span></span
+				>
+			</div>
+			<div id="c_user">
+				<span id="sendCtrlAltDelButton" class="mr16">发送Ctrl+Alt+Del</span>
+				<span>{{user_name}}</span>
+			</div>
+		</div>
+		<div id="screen">
+			<!-- This is where the remote screen will appear -->
+		</div>
+
+		<div id="mask">点击进入操作</div>
+	</body>
+</html>
